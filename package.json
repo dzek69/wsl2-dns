@@ -1,0 +1,26 @@
+{
+  "name": "wsl2-dns",
+  "version": "1.0.0-beta.1",
+  "license": "MIT",
+  "scripts": {
+    "docs": "typedoc --exclude \"**/*+(.spec|.e2e).ts\" --excludeExternals --ignoreCompilerErrors --out docs src",
+    "compile": "yarn compile:cjs",
+    "compile:cjs": "rm -rf dist && tsc --project tsconfig.cjs.json && node ./build-scripts/compile.cjs.after.mjs",
+    "start:dev": "nodemon",
+    "prepack": "yarn compile && yarn docs"
+  },
+  "bin": {
+    "wsl2-dns": "./cjs/index.js"
+  },
+  "main": "./cjs/index.js",
+  "type": "commonjs",
+  "dependencies": {},
+  "devDependencies": {
+    "@types/node": "^14.14.7",
+    "fs-extra": "^9.0.1",
+    "nodemon": "^2.0.6",
+    "ts-node": "^9.0.0",
+    "typedoc": "^0.19.2",
+    "typescript": "^4.0.3"
+  }
+}

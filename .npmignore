@@ -1,0 +1,12 @@
+/.idea/
+/build-scripts/
+/test/
+/test-out/
+
+/yarn.lock
+/*.tgz
+/*.log
+/.yarnclean
+/nodemon.json
+/.editorconfig
+/tsconfig.*
