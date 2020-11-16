@@ -1,6 +1,6 @@
 {
   "name": "wsl2-dns",
-  "version": "1.0.0-beta.1",
+  "version": "1.0.0",
   "license": "MIT",
   "scripts": {
     "docs": "typedoc --exclude \"**/*+(.spec|.e2e).ts\" --excludeExternals --ignoreCompilerErrors --out docs src",

@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 import { execFile } from "child_process";
 import { openSync, closeSync } from "fs";
 import {readFile, writeFile} from "fs/promises";
@@ -8,7 +9,7 @@ const getArgs = () => {
 
 const getSelfIP = (): Promise<string> => {
     return new Promise((resolve, reject) => {
-        execFile("isp", ["addr"], (error, stdout, stderr) => {
+        execFile("ip", ["addr"], (error, stdout, stderr) => {
             if (error) {
                 reject(error);
                 return;
